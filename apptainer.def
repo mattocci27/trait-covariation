@@ -1,0 +1,11 @@
+BootStrap: docker
+From: mattocci/cmdstan-zsh:4.6.1
+
+%apprun R
+  exec R "${@}"
+
+%apprun Rscript
+  exec Rscript "${@}"
+
+%runscript
+  exec R "${@}"
